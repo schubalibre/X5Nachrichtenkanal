@@ -19,6 +19,22 @@ public class Main {
 		empfaengerThread.startExecution();
 		empfaengerThread.setSleepRange(10000);
 		
+		/*
+		 * 
+		 ArrayList<String> container = new ArrayList<String>();
+		
+		//TextContainer container = new TextContainerFiFO();
+
+		Animate sender = new SenderGeneric(container);
+		AnimatorThread senderThread = new AnimatorThread(sender);
+		senderThread.startExecution();
+
+		Animate empfaenger = new EmpfaengerGeneric(container);
+		AnimatorThread empfaengerThread = new AnimatorThread(empfaenger);
+		empfaengerThread.startExecution();
+		empfaengerThread.setSleepRange(10000);
+		 * */
+		
 		
 	}
 }
