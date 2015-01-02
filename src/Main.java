@@ -2,13 +2,14 @@
 import cs101.lang.Animate;
 import cs101.lang.AnimatorThread;
 
-
-
 public class Main {
 	
 	public static void main(String[] args) {
+		//TextContainer container = new TextContainerPrototype();
 		
-		TextContainer container = new TextContainerPrototype();
+		TextContainer container = new TextContainerStack();
+		
+		//TextContainer container = new TextContainerQueue();
 
 		Animate sender = new Sender(container);
 		AnimatorThread senderThread = new AnimatorThread(sender);
@@ -18,23 +19,6 @@ public class Main {
 		AnimatorThread empfaengerThread = new AnimatorThread(empfaenger);
 		empfaengerThread.startExecution();
 		empfaengerThread.setSleepRange(10000);
-		
-		/*
-		 * 
-		 ArrayList<String> container = new ArrayList<String>();
-		
-		//TextContainer container = new TextContainerFiFO();
-
-		Animate sender = new SenderGeneric(container);
-		AnimatorThread senderThread = new AnimatorThread(sender);
-		senderThread.startExecution();
-
-		Animate empfaenger = new EmpfaengerGeneric(container);
-		AnimatorThread empfaengerThread = new AnimatorThread(empfaenger);
-		empfaengerThread.startExecution();
-		empfaengerThread.setSleepRange(10000);
-		 * */
-		
-		
+	
 	}
 }
